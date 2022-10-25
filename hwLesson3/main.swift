@@ -143,24 +143,7 @@ purchases(p1: p1, p2: p2, p3: p3, p4: p4, p5: p5)
 //250 + скидка 12.5
 //Итого: 237.5
 
-
 //ДОП
-func sum (numberOne: Int, numberTwo: Int) -> Int{
-    return numberOne + numberTwo
-}
-
-func difference(numberOne: Int, numberTwo: Int) -> Int{
-    return numberOne - numberTwo
-}
-
-func multiplication(numberOne: Int, numberTwo: Int) -> Int{
-    return numberOne * numberTwo
-}
-
-func division(numberOne: Int, numberTwo: Int) -> Int{
-    return numberOne / numberTwo
-}
-
 func calculator(){
     print("Введите первое число:")
     let numberOne = readLine()!
@@ -170,12 +153,24 @@ func calculator(){
     let numberTwo = readLine()!
 
     if symbol == "+" {
+        func sum (numberOne: Int, numberTwo: Int) -> Int{
+            return numberOne + numberTwo
+        }
         print("\(numberOne) + \(numberTwo) = \(sum(numberOne: Int(numberOne)!, numberTwo: Int(numberTwo)!))")
     } else if symbol == "-" {
+        func difference(numberOne: Int, numberTwo: Int) -> Int{
+            return numberOne - numberTwo
+        }
         print("\(numberOne) - \(numberTwo) = \(difference(numberOne: Int(numberOne)!, numberTwo: Int(numberTwo)!))")
     } else if symbol == "*" {
+        func multiplication(numberOne: Int, numberTwo: Int) -> Int{
+            return numberOne * numberTwo
+        }
         print("\(numberOne) * \(numberTwo) = \(multiplication(numberOne: Int(numberOne)!, numberTwo: Int(numberTwo)!))")
     } else if symbol == "/" {
+        func division(numberOne: Int, numberTwo: Int) -> Int{
+            return numberOne / numberTwo
+        }
         print("\(numberOne) / \(numberTwo) = \(division(numberOne: Int(numberOne)!, numberTwo: Int(numberTwo)!))")
     } else {
         print("Такого знака нет")
@@ -195,4 +190,3 @@ calculator()
 //Введите второе число:
 //6
 //5 * 6 = 30
-
